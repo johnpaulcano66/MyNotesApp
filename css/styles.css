@@ -1,0 +1,310 @@
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Adjust the gap between columns */
+    justify-content: center; /* Center the columns horizontally */
+  }
+  
+  .list-group-item {
+    margin-bottom: 100px;
+    position: relative;
+    width: 300px;
+    height: 250px;
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    background-size: cover;
+    padding: 15px; /* Padding inside the card */
+    border: 3px solid #73AD21;
+    
+}
+
+
+.list-group-item .bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 190px;
+    height: 240px;
+    z-index: 2;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+}
+
+.list-group-item .blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+    0% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+    50% {
+        transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+    75% {
+        transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+    100% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+}
+
+.input-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          margin-left: 150px;
+        }
+
+        .input-group input[type="text"] {
+            width: 240px; /* Adjust the width of the input field */
+            height: 30px; /* Adjust the height of the input field */
+            padding: 5px 10px;
+            font-size: 14px; /* Adjust the font size */
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+        }
+
+        .input-group button {
+            height: 30px; /* Make buttons smaller */
+            background-color: #f8f9fa; /* Light grey background */
+            color: #5a5a5a; /* Darker text color for better readability */
+            border: 1px solid #ccc;
+            font-size: 14px; /* Smaller font size */
+            padding: 0 10px;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+        }
+
+        /* Additional styling for the clear button to differentiate it */
+        .input-group button:last-child {
+            margin-left: -1px; /* Remove the gap between buttons */
+            background-color: #e9ecef; /* Slightly different shade of grey */
+        }
+
+        /* Styling for focus and hover states to improve user interaction */
+        .input-group input[type="text"]:focus,
+        .input-group button:hover {
+            border-color: #80bdff; /* Light blue border for focus/hover */
+            outline: none;
+        }
+
+        .input-group button:focus {
+            outline: none; /* Remove outline on focus for cleaner look */
+            background-color: #dae0e5; /* Slightly darker background on focus */
+        }
+        
+
+    .btn-submit {
+      font-family: inherit;
+      font-size: 18px;
+      background: linear-gradient(to bottom, #7e8e90 0%,#494b4f 100%);
+      color: rgb(77, 75, 75);
+      padding: 0.8em 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-submit:focus,
+    .btn-submit:active {
+      transform: scale(0.95);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-submit svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin-right: 0.5em;
+      transition: all 0.3s;
+    }
+
+    /* Additional styles for the parent div */
+    .m-t-lg {
+      margin-top: 20px; /* Adjust this value as needed */
+    }
+    .searchBox {
+    
+    max-width: 2000px;
+    align-items: center;
+   padding-left: 200px;
+    gap: 8px;
+  
+    border-radius: 50px;
+    position: relative;
+    margin-left: 200px;
+  
+}
+
+.searchButton {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  
+}
+
+.searchButton:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+.searchButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.searchInput {
+   
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+   
+}
+
+
+
+
+
+/* Clear floats after the logo and links */
+.topnavs:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Additional styles integrated */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    float: right;
+    overflow-y: hidden;
+}
+
+.navbar {
+    min-width: 700px;
+    width: 100%;
+}
+
+.nav--list {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.active {
+    position: absolute;
+    z-index: 1;
+    width: 0%;
+    height: 0%;
+    background: #000;
+    border-radius: 5px;
+    transition: left 300ms ease, width 200ms 200ms ease;
+}
+
+.item {
+    padding: 10px;
+    margin: 10px;
+    z-index: 20;
+}
+
+.item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 4px 3px 3px #1b365d;
+}
+
+.black-heading {
+    color: #000; /* Black color */
+}
+
+.topnavs{
+
+    background-color: #66a6ff;
+}
+
+.form {
+    margin-top: 50px; /* Adjust top margin as needed */
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #fff;
+    color: #fff;  
+    border: 5px solid #333;
+    width: 300px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height to fill viewport */
+}
+
+/* Additional styling for the container */
