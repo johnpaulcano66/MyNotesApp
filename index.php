@@ -446,7 +446,7 @@ h1 {
     <footer id="footer">
       <div class="text-center padder" style="display: flex; justify-content: center;">
         <p>
-          <small style="color: black;">CANO()NOtes | Web Application by Cano and Canono<br>&copy; 2024</small>
+          <small style="color: black;">CANOtes | Web Application Developed by Paul Cano <br>&copy; 2024</small>
         </p>
       </div>
     </footer>
