@@ -1,10 +1,10 @@
 <?php
 
 $conn = mysqli_connect(
-    getenv('DB_HOST'),       // Database host (e.g., localhost or the Coolify server)
-    getenv('DB_USERNAME'),   // Database username
+    getenv('DB_HOST'),       // Database host
+    getenv('DB_USER'),       // Database username (changed from DB_USERNAME)
     getenv('DB_PASSWORD'),   // Database password
-    getenv('DB_DATABASE'),   // Database name
+    getenv('DB_NAME'),       // Database name (changed from DB_DATABASE)
     getenv('DB_PORT') ?: '3306' // Database port, default to 3306 if not set
 );
 
